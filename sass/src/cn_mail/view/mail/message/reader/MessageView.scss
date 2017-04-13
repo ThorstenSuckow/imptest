@@ -1,0 +1,95 @@
+/**
+ * conjoon
+ * (c) 2007-2017 conjoon.org
+ * licensing@conjoon.org
+ *
+ * theme-cn_default
+ * Copyright (C) 2017 Thorsten Suckow-Homberg/conjoon.org
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.cn_mail-mailmessagereadermessageview {
+
+    background-color : $lightest-color;
+
+    .cn_mail-header {
+        border-bottom : 1px solid $mail-border-color;
+
+        .sender-img {
+
+            margin-left : 10px;
+
+            &.x-fa::before {
+                color     : lighten($color, 70%);
+                font-size : 86px;
+            }
+        }
+
+
+        .message-subject {
+            line-height : 1.7em;
+
+            .from {
+                font-size : 16px;
+            }
+
+            .date {
+                line-height : 1.7em;
+                padding-top : 8px;
+                color      : lighten($color, 20%);
+            }
+
+            .subject {
+                font-size     : 22px;
+                max-width     : 95%;
+                padding-top   : 4px;
+                text-overflow : ellipsis;
+                white-space   : nowrap;
+            }
+        }
+
+    }
+
+    .cn_mail-body {
+
+        font-size: 14px;
+        line-height: 1.6em;
+        padding-top: 8px;
+        padding-bottom: 14px;
+        padding-left:26px;
+    }
+
+    .cn_mail-top-toolbar {
+
+        background-color: $lightest-color;
+
+        .x-btn-inner-default-toolbar-small {
+            color: $color;
+        }
+
+        a:first-child {
+            left: 2px !important;
+        }
+    }
+
+
+    .cn_mail-action-button {
+        .mail-compose-save-button, .mail-compose-save-button .x-frame-mc{
+        }
+        .mail-compose-send-button, .mail-compose-send-button .x-frame-mc{
+        }
+    }
+
+}

@@ -1,0 +1,79 @@
+/**
+ * conjoon
+ * (c) 2007-2017 conjoon.org
+ * licensing@conjoon.org
+ *
+ * theme-cn_default
+ * Copyright (C) 2017 Thorsten Suckow-Homberg/conjoon.org
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+$lightest-color : #ffffff;
+
+$panel-navigation-background-color : #32404e;
+$panel-navigation-item-line-height : 64px;
+$panel-navigation-item-text-color  : #ADB3B8;
+
+$tabpanel-w-borders-background : #f6f6f6;
+
+$base-color           : #35baf6;
+$circle-border-radius : 50%;
+$base-border-color    : #ddd;
+$lightest-color       :#fff;
+$font-weight          : normal;
+
+$placeholder-color : darken($lightest-color, 30%);
+
+$accordion-header-background-color : $lightest-color;
+$accordion-header-color            : #333;
+
+$button-toolbar-background-color       : transparent;
+$button-toolbar-border-color           : transparent;
+$button-toolbar-hover-background-color : #efefef;
+
+//Form and Toolbar Button UI colors
+$color-blue        : #167abc;
+$color-soft-cyan   : #03b4d5;
+$color-soft-blue   : #2eadf5;
+$color-soft-green  : #9cc96b;
+$color-soft-red    : #e44959;
+$color-soft-purple : #925e8b;
+$color-gray        : #949495;
+$color-green       : #16b603;
+
+$blank-page-background-color : #ebebeb;
+$blank-page-color            : #cacaca;
+
+$button-lightest-background-color       : transparent;
+$button-lightest-border-color           : darken($lightest-color, 10%);
+$button-lightest-color                  : darken($lightest-color, 50%);
+$button-lightest-hover-background-color : #efefef;
+
+$form-field-focus-border-color : $base-color;
+
+// Create placeholder mixin
+::-webkit-input-placeholder {
+    color       : $placeholder-color;
+    font-weight : normal;
+}
+:-moz-placeholder {
+    color : $placeholder-color;
+}
+::-moz-placeholder {
+    color : $placeholder-color;
+}
+:-ms-input-placeholder {
+    color : $placeholder-color;
+}

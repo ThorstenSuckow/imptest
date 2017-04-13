@@ -1,0 +1,82 @@
+/**
+ * conjoon
+ * (c) 2007-2017 conjoon.org
+ * licensing@conjoon.org
+ *
+ * theme-cn_default
+ * Copyright (C) 2017 Thorsten Suckow-Homberg/conjoon.org
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+@mixin btn-border($background-color){
+    background-color : $background-color;
+    border-color     : $background-color !important;
+    .x-btn-inner-default-toolbar-small{
+        color : $lightest-color;
+    }
+    &:hover{
+        .x-btn-inner-default-toolbar-small,.x-btn-inner-default-small{
+            color : $background-color;
+        }
+        .x-btn-icon-el-default-small,.x-btn-icon-el-default-toolbar-small{
+            color : $background-color;
+        }
+        background-color : transparent;
+    }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius : $radius;
+    -moz-border-radius    : $radius;
+    -ms-border-radius     : $radius;
+    border-radius         : $radius;
+}
+
+@mixin box-shadow($h-shadow,$v-shadow,$blur,$spread,$shadow-color) {
+    -webkit-box-shadow : $h-shadow $v-shadow $blur $spread $shadow-color;
+    -moz-box-shadow    : $h-shadow $v-shadow $blur $spread $shadow-color;
+    -ms-box-shadow     : $h-shadow $v-shadow $blur $spread $shadow-color;
+    box-shadow         : $h-shadow $v-shadow $blur $spread $shadow-color;
+}
+
+*:focus {
+    outline : 0 !important;
+}
+
+.shadow-panel, .x-menu-header {
+    z-index : 0 !important;
+}
+
+.shadow-panel{
+    @include box-shadow(0, 1px, 2px, 0, rgba(0,0,0,0.2));
+
+}
+
+.x-css-shadow{
+    box-shadow : none !important;
+}
+
+.x-fa {
+    display : inline-block;
+    font    : normal normal normal 14px/1 $font-family;
+}
+
+.alignRight {
+    float : right;
+}
+
+.boldFont {
+    font-weight : bold;
+}
