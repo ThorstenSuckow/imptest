@@ -8,11 +8,9 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   
-  - "if [ ! -d \"$TRAVIS_BUILD_DIR/../ext\" ]; then wget http://cdn.sencha.com/ext/gpl/ext-$CN_SENCHA_EXT_VERSION-gpl.zip     ln -sv `pwd`/ext-$CN_SENCHA_EXT_VERSION $TRAVIS_BUILD_DIR/../ext fi"
-
-  #- "wget http://cdn.sencha.com/ext/gpl/ext-$CN_SENCHA_EXT_VERSION-gpl.zip"
-  #- "unzip -q ext-$CN_SENCHA_EXT_VERSION-gpl.zip"
-  #- "ln -sv `pwd`/ext-$CN_SENCHA_EXT_VERSION $TRAVIS_BUILD_DIR/../ext"
+  - "wget http://cdn.sencha.com/ext/gpl/ext-$CN_SENCHA_EXT_VERSION-gpl.zip"
+  - "unzip -q ext-$CN_SENCHA_EXT_VERSION-gpl.zip"
+  - "ln -sv `pwd`/ext-$CN_SENCHA_EXT_VERSION $TRAVIS_BUILD_DIR/../ext"
   
   - "wget http://cdn.sencha.com/cmd/$CN_SENCHA_CMD_VERSION/no-jre/SenchaCmd-$CN_SENCHA_CMD_VERSION-linux-amd64.sh.zip"
   - "unzip -q SenchaCmd-$CN_SENCHA_CMD_VERSION-linux-amd64.sh.zip"
