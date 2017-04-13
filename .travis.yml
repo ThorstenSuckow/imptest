@@ -19,6 +19,13 @@ before_script:
   
   - "export PATH=~/bin/Sencha/Cmd/$CN_SENCHA_CMD_VERSION/:$PATH"
   
+
+  - "mkdir /tmp/conjoon"
+  - "sencha -sdk $TRAVIS_BUILD_DIR/../ext generate workspace /tmp/conjoon"
+  - "mkdir /tmp/conjoon/packages"
+  - "mkdir /tmp/conjoon/packages/local"
+  - "cp $TRAVIS_BUILD_DIR/* /tmp/conjoon/packages/local/theme-cn_default -R"
+
   - "cd $TRAVIS_BUILD_DIR && sencha package build"
   
   - "cd $TRAVIS_BUILD_DIR"
