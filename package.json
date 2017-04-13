@@ -7,7 +7,11 @@
     "creator": "conjoon Open Source Project",
     "summary": "The default theme for conjoon.",
     "detailedDescription": "This package contains overrides, sass and css directives for theming the conjoon application along with its packages.",
-    "version": "0.1",
+    "version": "0.0.1",
+    "repository": {
+    "type": "git",
+        "url": "git+https://github.com/conjoon/theme-cn_default.git"
+    },
     "compatVersion": "0.1",
     "format": "1",
     "slicer": {
