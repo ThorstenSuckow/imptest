@@ -4,6 +4,9 @@ node_js:
   - 0.10.30
 env:
   - CN_SENCHA_EXT_VERSION="6.2.0" CN_SENCHA_CMD_VERSION="6.2.2.36" 
+install:
+  - npm install
+  - gem install jsduck
 before_script:
   
   - "export DISPLAY=:99.0"
