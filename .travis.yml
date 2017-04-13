@@ -1,5 +1,9 @@
+# This is the very basic travis configuration for the theme-cn_default
+# package of the conjoon Open Source Project. It simply creates a
+# workspace, adds this package and tries to build it.
+language: node_js
 env:
-  - CN_SENCHA_EXT_VERSION="6.2.0" CN_SENCHA_CMD_VERSION="6.2.2.36" 
+  - CN_PACKAGE="theme-cn_default" CN_SENCHA_EXT_VERSION="6.2.0" CN_SENCHA_CMD_VERSION="6.2.2.36" CN_WORKSPACE="/tmp/conjoon" 
 
 install:
   - gem install jsduck
@@ -16,10 +20,10 @@ before_script:
   
   - "export PATH=~/bin/Sencha/Cmd/$CN_SENCHA_CMD_VERSION/:$PATH"
   
-  - "mkdir /tmp/conjoon"
-  - "sencha -sdk $TRAVIS_BUILD_DIR/../ext generate workspace /tmp/conjoon"
-  - "mkdir -p /tmp/conjoon/packages/local/theme-cn_default"
-  - "cp $TRAVIS_BUILD_DIR/. /tmp/conjoon/packages/local/theme-cn_default -R"
+  - "mkdir $CN_WORKSPACE"
+  - "sencha -sdk $TRAVIS_BUILD_DIR/../ext generate workspace $CN_WORKSPACE"
+  - "mkdir -p $CN_WORKSPACE/packages/local/$CN_PACKAGE"
+  - "cp $TRAVIS_BUILD_DIR/. $CN_WORKSPACE/packages/local/$CN_PACKAGE -R"
 
 script:
-  - "cd /tmp/conjoon/packages/local/theme-cn_default && sencha package build"  
+  - "cd $CN_WORKSPACE/packages/local/$CN_PACKAGE && sencha package build"  
