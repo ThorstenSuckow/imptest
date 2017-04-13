@@ -1,13 +1,10 @@
-# 
 env:
   - CN_SENCHA_EXT_VERSION="6.2.0" CN_SENCHA_CMD_VERSION="6.2.2.36" 
+
 install:
   - gem install jsduck
+
 before_script:
-  
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  
   - "wget http://cdn.sencha.com/ext/gpl/ext-$CN_SENCHA_EXT_VERSION-gpl.zip"
   - "unzip -q ext-$CN_SENCHA_EXT_VERSION-gpl.zip"
   - "ln -sv `pwd`/ext-$CN_SENCHA_EXT_VERSION $TRAVIS_BUILD_DIR/../ext"
@@ -19,12 +16,10 @@ before_script:
   
   - "export PATH=~/bin/Sencha/Cmd/$CN_SENCHA_CMD_VERSION/:$PATH"
   
-
   - "mkdir /tmp/conjoon"
   - "sencha -sdk $TRAVIS_BUILD_DIR/../ext generate workspace /tmp/conjoon"
-  - "mkdir /tmp/conjoon/packages/local"
-  - "mkdir /tmp/conjoon/packages/local/theme-cn_default"
-  - "cp $TRAVIS_BUILD_DIR/* /tmp/conjoon/packages/local/theme-cn_default -R"
+  - "mkdir -p /tmp/conjoon/packages/local/theme-cn_default"
+  - "cp $TRAVIS_BUILD_DIR/. /tmp/conjoon/packages/local/theme-cn_default -R"
 
   - "cd /tmp/conjoon/packages/local/theme-cn_default && sencha package build"
   
