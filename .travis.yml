@@ -21,6 +21,5 @@ before_script:
   - "mkdir -p /tmp/conjoon/packages/local/theme-cn_default"
   - "cp $TRAVIS_BUILD_DIR/. /tmp/conjoon/packages/local/theme-cn_default -R"
 
-  - "cd /tmp/conjoon/packages/local/theme-cn_default && sencha package build"
-  
-  - "cd $TRAVIS_BUILD_DIR"
+script:
+  - "cd /tmp/conjoon/packages/local/theme-cn_default && sencha package build"  
