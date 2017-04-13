@@ -22,6 +22,7 @@ before_script:
 
   - "mkdir /tmp/conjoon"
   - "sencha -sdk $TRAVIS_BUILD_DIR/../ext generate workspace /tmp/conjoon"
+  - "mkdir /tmp/conjoon/packages/local"
   - "mkdir /tmp/conjoon/packages/local/theme-cn_default"
   - "cp $TRAVIS_BUILD_DIR/* /tmp/conjoon/packages/local/theme-cn_default -R"
 
